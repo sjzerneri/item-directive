@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Item Directive</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body ng-app="myApp">
+
+    <div class="box" make-editable contenteditable="{{editStatus}}">
+
+        <div class="text">
+            <p ng-bind="text"> </p>
+        </div>
+
+        <div class="buttons">
+            <button ng-show="!editable" ng-click="edit()"> Edit</button>
+            <button ng-show="editable" ng-click=save()> Save</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
